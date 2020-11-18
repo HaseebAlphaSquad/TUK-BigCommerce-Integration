@@ -115,6 +115,12 @@ a {
   animation-name: fadeIn;
 }
 
+.heroimg{
+  background-image: url("/public/mask.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;

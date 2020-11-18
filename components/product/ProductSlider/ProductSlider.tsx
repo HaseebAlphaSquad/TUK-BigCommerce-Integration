@@ -17,6 +17,7 @@ const ProductSlider: FC = ({ children }) => {
     },
   })
 
+
   return (
     <div className={s.root}>
       <button

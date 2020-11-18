@@ -24,7 +24,69 @@ const Footer: FC<Props> = ({ className, pages }) => {
   return (
     <footer className={rootClassName}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accents-2 py-12 text-primary bg-primary transition-colors duration-150">
+      <div className="bottom-0 p-20">
+            <h1 className="mx-auto text-lg font-bold text-center montserrat pt-10">SIGN UP FOR MORE UPDATES</h1>
+            <h1 className="mx-auto text-center text-sm montserrat pt-2">Sign up for exclusive early sale access and tailored new arrivals.</h1>
+            <div className="flex pb-3 mb-5 items-end justify-center">
+                <form className="flex flex-col border-b">
+                    <label htmlFor="email" className="montserrat mb-2 text-white">
+                        Sign Up to Receive Product Updates and More
+                            </label>
+                    <input className="bg-transparent montserrat outline-none focus:outline-none text-black placeholder-gray-600  focus:bg-transparent appearance-none" type="text" name="email" id="email" placeholder="Your email address" />
+                </form>
+                <div className="cursor-pointer flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-right" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#8C8C8C" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" />
+                        <polyline points="9 6 15 12 9 18" />
+                    </svg>
+                </div>
+            </div>
+
+            <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pt-12 gap-8 justify-center">
+
+                <div className="rounded">
+                    <h1 className="text-lg montserrat font-bold pb-3">CUSTOMER SERVICES</h1>
+                    <ul className="montserrat text-gray-700 pt-2 text-sm">
+                        <li className="pb-3">CONTACT</li>
+                        <li className="pb-3">TRACK ORDER</li>
+                        <li className="pb-3">DELIVERY & RETURNS</li>
+                        <li className="pb-3">PAYMENT</li>
+                        <li className="pb-3">MAKE A RETURN</li>
+                        <li className="pb-3">FAQ</li>
+                    </ul>
+                </div>
+
+                <div className="rounded">
+                    <h1 className="text-lg montserrat font-bold pb-3">INFO</h1>
+                    <ul className="montserrat text-gray-700 pt-2 text-sm">
+                        <li className="pb-3">GIFT VOUCHERS</li>
+                        <li className="pb-3">SIZE GUIDE</li>
+                        <li className="pb-3">CAREERS AT ALPHASQUAD</li>
+                        <li className="pb-3">ABOUT US</li>
+                        <li className="pb-3">LEGAL POLICIES</li>
+                    </ul>
+                </div>
+
+                <div className="rounded">
+                    <h1 className="text-lg montserrat font-bold pb-3">FOLLOW US</h1>
+                    <ul className="text-gray-700 montserrat pt-2 text-sm">
+                        <li className="pb-3">FACEBOOK</li>
+                        <li className="pb-3">INSTAGRAM</li>
+                    </ul>
+                </div>
+
+                <div className="rounded">
+                    <h1 className="text-lg montserrat font-bold pb-3">CONTACT US</h1>
+                    <ul className="montserrat text-gray-700 pt-2 text-sm">
+                        <li className="pb-3">hello@alphasquad.com</li>
+                        <li className="pb-3">+92 0900 78601</li>
+                        <li className="pb-3">Visit us at Alpha Squad, NSTP, H-12 Islamabad</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {/* <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accents-2 py-12 text-primary bg-primary transition-colors duration-150">
           <div className="col-span-1 lg:col-span-2">
             <Link href="/">
               <a className="flex flex-initial items-center font-bold md:mr-24">
@@ -109,7 +171,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
               />
             </a>
           </div>
-        </div>
+        </div> */}
       </Container>
     </footer>
   )

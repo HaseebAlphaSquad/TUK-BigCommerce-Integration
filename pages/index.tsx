@@ -1,14 +1,14 @@
 import rangeMap from '@lib/range-map'
 import { Layout } from '@components/common'
 import { ProductCard } from '@components/product'
-import { Grid, Marquee, Hero } from '@components/ui'
+import { Grid, Marquee } from '@components/ui'
 import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
-
 import { getConfig } from '@bigcommerce/storefront-data-hooks/api'
 import getAllProducts from '@bigcommerce/storefront-data-hooks/api/operations/get-all-products'
 import getSiteInfo from '@bigcommerce/storefront-data-hooks/api/operations/get-site-info'
 import getAllPages from '@bigcommerce/storefront-data-hooks/api/operations/get-all-pages'
+import Hero from '../components/HomePage/Hero';
 
 export async function getStaticProps({
   preview,
@@ -84,7 +84,7 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div>
-      <Grid>
+      {/* <Grid>
         {featured.slice(0, 3).map(({ node }, i) => (
           <ProductCard
             key={node.path}
@@ -107,17 +107,8 @@ export default function Home({
             imgLayout="fixed"
           />
         ))}
-      </Marquee>
-      <Hero
-        headline="Release Details: The Yeezy BOOST 350 V2 ‘Natural'"
-        description="
-        The Yeezy BOOST 350 V2 lineup continues to grow. We recently had the
-        ‘Carbon’ iteration, and now release details have been locked in for
-        this ‘Natural’ joint. Revealed by Yeezy Mafia earlier this year, the
-        shoe was originally called ‘Abez’, which translated to ‘Tin’ in
-        Hebrew. It’s now undergone a name change, and will be referred to as
-        ‘Natural’."
-      />
+      </Marquee> */}
+      <Hero />
       <Grid layout="B">
         {featured.slice(3, 6).map(({ node }, i) => (
           <ProductCard

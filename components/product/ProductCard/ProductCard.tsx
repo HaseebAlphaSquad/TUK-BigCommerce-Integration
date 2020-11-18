@@ -42,7 +42,14 @@ const ProductCard: FC<Props> = ({
       <a
         className={cn(s.root, { [s.simple]: variant === 'simple' }, className)}
       >
-        {variant === 'slim' ? (
+      <div className="relative overflow-hidden box-border">
+          <img className="object-cover imgC" height={imgHeight} width={imgWidth} src={p.images.edges?.[0]?.node.urlOriginal!} alt={p.images.edges?.[0]?.node.altText || 'Product Image'}/>
+          <h1 className="text-gray-600 montserrat pt-2 text-xs">{"#"+p.entityId}</h1>
+          <h1 className="montserrat">{p.name}</h1>
+          <h1 className="montserrat pt-2 font-semibold">{price}</h1>
+      </div>
+
+        {/* {variant === 'slim' ? (
           <div className="relative overflow-hidden box-border">
             <div className="absolute inset-0 flex items-center justify-end mr-8 z-20">
               <span className="bg-black text-white inline-block p-3 font-bold text-xl break-words">
@@ -92,7 +99,7 @@ const ProductCard: FC<Props> = ({
               />
             </div>
           </>
-        )}
+        )} */}
       </a>
     </Link>
   )

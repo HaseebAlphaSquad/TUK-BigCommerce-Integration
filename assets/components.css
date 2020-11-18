@@ -1,3 +1,9 @@
 .fit {
   min-height: calc(100vh - 88px);
 }
+
+.heroimg{
+  background-image: url("/public/mask.jpg");
+  background-position: center;
+  background-size: cover;
+}

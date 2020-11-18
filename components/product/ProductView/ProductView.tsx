@@ -18,6 +18,7 @@ import {
   SelectedOptions,
 } from '../helpers'
 import WishlistButton from '@components/wishlist/WishlistButton'
+import FAQ from '../FAQ/FAQ'
 
 interface Props {
   className?: string
@@ -55,6 +56,8 @@ const ProductView: FC<Props> = ({ product }) => {
       setLoading(false)
     }
   }
+
+{/*product view*/}
 
   return (
     <Container className="max-w-none w-full" clean>
@@ -107,6 +110,12 @@ const ProductView: FC<Props> = ({ product }) => {
 
         <div className={s.sidebar}>
           <section>
+            <div className="top-0">
+              <h1 className="text-3xl">{product.name}</h1>
+            </div>
+            <div>
+              <h1 className="text-xl pb-5">{product.entityId}</h1>
+            </div>
             {options?.map((opt: any) => (
               <div className="pb-4" key={opt.displayName}>
                 <h2 className="uppercase font-medium">{opt.displayName}</h2>
@@ -139,6 +148,9 @@ const ProductView: FC<Props> = ({ product }) => {
             <div className="pb-14 break-words w-full max-w-xl">
               <HTMLContent html={product.description} />
             </div>
+            <div className="pb-12 w-full max-w-xl">
+            <FAQ/>
+          </div>
           </section>
           <div>
             <Button
@@ -149,16 +161,11 @@ const ProductView: FC<Props> = ({ product }) => {
               loading={loading}
               disabled={!variant}
             >
-              Add to Cart
+              Add to Bag
             </Button>
           </div>
+          
         </div>
-
-        <WishlistButton
-          className={s.wishlistButton}
-          productId={product.entityId}
-          variant={product.variants.edges?.[0]!}
-        />
       </div>
     </Container>
   )
